@@ -88,5 +88,21 @@ if __name__ == '__main__':
 
 	
     from google.colab.patches import cv2_imshow
+	cv2.imwrite(original.jpg, ori)
+	cv2.imwrite(hair_seg.img, image)
     cv2_imshow(cv2.resize(ori, (512, 512)))
     cv2_imshow(cv2.resize(image, (512, 512)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
