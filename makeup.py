@@ -56,6 +56,7 @@ def hair(image, parsing, part=17, color=[230, 50, 20]):
 
 
 if __name__ == '__main__':
+
     # 1  face
     # 11 teeth
     # 12 upper lip
@@ -86,29 +87,15 @@ if __name__ == '__main__':
         image = hair(image, parsing, part, color)
     
     IN_COLAB = 'google.colab' in sys.modules
+    print(f'Colab Value:{IN_COLAB}')
     if IN_COLAB:
+        print("I am in colab")
         from google.colab.patches import cv2_imshow
         cv2_imshow(cv2.resize(ori, (512, 512)))
         cv2_imshow(cv2.resize(image, (512, 512)))
-        
+        print("I am done in colab")
     else:
         cv2.imshow('image', cv2.resize(ori, (512, 512)))
         cv2.imshow('color', cv2.resize(image, (512, 512)))
-        
         cv2.waitKey(0)
         cv2.destroyAllWindows()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
