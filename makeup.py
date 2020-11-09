@@ -91,7 +91,7 @@ if __name__ == '__main__':
         cv2_imshow(cv2.resize(ori, (512, 512)))
         cv2_imshow(cv2.resize(image, (512, 512)))
         
-     else:
+    else:
         cv2.imshow('image', cv2.resize(ori, (512, 512)))
         cv2.imshow('color', cv2.resize(image, (512, 512)))
         
