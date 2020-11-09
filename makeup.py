@@ -85,17 +85,8 @@ if __name__ == '__main__':
 
     for part, color in zip(parts, colors):
         image = hair(image, parsing, part, color)
-    
-    IN_COLAB = 'google.colab' in sys.modules
-    print(f'Colab Value:{IN_COLAB}')
-    if IN_COLAB:
-        print("I am in colab")
-        from google.colab.patches import cv2_imshow
-        cv2_imshow(cv2.resize(ori, (512, 512)))
-        cv2_imshow(cv2.resize(image, (512, 512)))
-        print("I am done in colab")
-    else:
-        cv2.imshow('image', cv2.resize(ori, (512, 512)))
-        cv2.imshow('color', cv2.resize(image, (512, 512)))
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+
+	
+    from google.colab.patches import cv2_imshow
+    cv2_imshow(cv2.resize(ori, (512, 512)))
+    cv2_imshow(cv2.resize(image, (512, 512)))
